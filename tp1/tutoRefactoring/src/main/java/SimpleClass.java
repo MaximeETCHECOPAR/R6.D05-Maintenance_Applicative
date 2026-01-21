@@ -1,0 +1,36 @@
+import java.time.LocalDate;
+
+public class SimpleClass {
+
+    public SimpleClass() {
+    }
+
+    /**
+     * Additionne a et b
+     * @param a - premier paramètre
+     * @param b - second paramètre
+     * @return
+     */
+    public int add(int a, int b) {
+        return a + b ;
+    }
+
+    public static boolean isNowBetween (LocalDate startingDate, LocalDate endingDate) {
+        LocalDate now = LocalDate.now();
+        return isaBoolean(startingDate, endingDate, now);
+    }
+
+    private static boolean isaBoolean(LocalDate startingDate, LocalDate endingDate, LocalDate now) {
+        return now.isAfter(startingDate)
+                &&
+                now.isBefore(endingDate);
+    }
+
+    public static void main(String[] args) {
+        new SimpleClass().add(1,2);
+
+        System.out.println("Hello world");
+    }
+}
+
+
