@@ -12,6 +12,11 @@ public class SimpleClass {
     public int add(int a, int b) {
         return a + b ;
     }
+    
+    private void isDateOutsider(LocalDate date, LocalDate startingDate, LocalDate
+            endingDate) {
+        return !DateUtils.isDateBetween(date, startingDate, endingDate);
+    }
 
     public static void main(String[] args) {
         new SimpleClass().add(1,2);
