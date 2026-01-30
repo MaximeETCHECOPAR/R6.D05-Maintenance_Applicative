@@ -1,4 +1,7 @@
 public class Voiture {
+    public static final int SPEED_MAX = 120;
+    public static final int INCREMENT_SPEED = 10;
+    public static final int SPEED_MINIMAL = 0;
     private String modele;
     private String couleur;
     private int vitesse;
@@ -6,7 +9,7 @@ public class Voiture {
     public Voiture(String model, String color) {
         this.modele = model;
         this.couleur = color;
-        this.vitesse = 0;
+        this.vitesse = SPEED_MINIMAL;
     }
 
     public int getVitesse() {
@@ -14,8 +17,8 @@ public class Voiture {
     }
 
     public void accelerer() {
-        if (vitesse + 10 <= 120) {
-            vitesse += 10;
+        if (vitesse + INCREMENT_SPEED <= SPEED_MAX) {
+            vitesse += INCREMENT_SPEED;
             // afficher détails
             System.out.println("Modèle : " + modele);
             System.out.println("Couleur : " + couleur);
@@ -26,8 +29,8 @@ public class Voiture {
     }
 
     public void ralentir() {
-        if (vitesse - 10 >= 0) {
-            vitesse -= 10;
+        if (vitesse - INCREMENT_SPEED >= SPEED_MINIMAL) {
+            vitesse -= INCREMENT_SPEED;
             // afficher détails
             System.out.println("Modèle : " + modele);
             System.out.println("Couleur : " + couleur);

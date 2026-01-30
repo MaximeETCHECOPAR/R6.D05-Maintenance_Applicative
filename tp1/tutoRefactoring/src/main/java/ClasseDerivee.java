@@ -4,4 +4,8 @@ public class ClasseDerivee extends BaseClass{
         ClasseDerivee subject = new ClasseDerivee();
         System.out.println("Doublement 21. Résultat = " + subject.doubleValue(21));
     }
+
+    protected int doubleValue(int number) {
+        return number + number;
+    }
 }
