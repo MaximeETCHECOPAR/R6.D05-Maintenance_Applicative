@@ -12,14 +12,14 @@ public class Car {
         this.speed = SPEED_MINIMAL;
     }
 
-    static void changeSpeed(Car car, int newSpeed) {
-        if (car.getSpeed() >= newSpeed) {
-            while (car.getSpeed() > newSpeed) {
-                car.slow();
+        public void changeSpeed(int newSpeed) {
+        if (this.getSpeed() >= newSpeed) {
+            while (this.getSpeed() > newSpeed) {
+                this.slow();
             }
         } else  {
-            while (car.getSpeed() < newSpeed) {
-                car.accelerate();
+            while (this.getSpeed() < newSpeed) {
+                this.accelerate();
             }
         }
     }

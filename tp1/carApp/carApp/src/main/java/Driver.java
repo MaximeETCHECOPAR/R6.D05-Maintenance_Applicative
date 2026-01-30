@@ -26,7 +26,7 @@ public class Driver {
 
     public void switchSpeed(Car car, int newSpeed) {
         System.out.println(name + " change la vitesse de la voiture à " + newSpeed);
-        Car.changeSpeed(car, newSpeed);
+        car.changeSpeed(newSpeed);
     }
 
 }
