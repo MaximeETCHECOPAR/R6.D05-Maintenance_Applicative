@@ -26,6 +26,10 @@ public class Driver {
 
     public void switchSpeed(Car car, int newSpeed) {
         System.out.println(name + " change la vitesse de la voiture à " + newSpeed);
+        changeSpeed(car, newSpeed);
+    }
+
+    private static void changeSpeed(Car car, int newSpeed) {
         if (car.getSpeed() >= newSpeed) {
             while (car.getSpeed() > newSpeed) {
                 car.slow();
