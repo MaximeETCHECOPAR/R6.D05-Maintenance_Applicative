@@ -7,7 +7,7 @@ public class DateUtils {
                 LocalDate.now().isBefore(endingDate);
     }
 
-    private static boolean isDateBetween(LocalDate startingDate, LocalDate endingDate, LocalDate now) {
+    private static boolean isDateBetween(LocalDate startingDate, LocalDate endingDate, LocalDate now, boolean inclusive) {
         return now.isAfter(startingDate)
                 &&
                 now.isBefore(endingDate);
@@ -15,6 +15,6 @@ public class DateUtils {
 
     private static boolean isDateOutsider(LocalDate date, LocalDate startingDate, LocalDate
             endingDate) {
-        return !isDateBetween(date, startingDate, endingDate);
+        return !isDateBetween(date, startingDate, endingDate, );
     }
 }
