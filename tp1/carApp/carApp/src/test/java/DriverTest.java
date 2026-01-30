@@ -19,14 +19,14 @@ public class DriverTest {
     @Test
     public void testStartCar() {
         Car voiture = new Car("Sedan", "Bleu");
-        driver.startCar(voiture);
+        driver.startCar();
         // How to assert that the demarrerVoiture method was called?
     }
 
     @Test
     public void testStopCar() {
         Car voiture = new Car("Sedan", "Bleu");
-        driver.stopCar(voiture);
+        driver.stopCar();
         // How to assert that the arreterVoiture method was called?
     }
 

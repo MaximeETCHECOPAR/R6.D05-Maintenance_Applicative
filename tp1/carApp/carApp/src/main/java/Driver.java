@@ -12,7 +12,7 @@ public class Driver {
         return age >= AGE_MINIMAL;
     }
 
-    public void startCar(Car car) {
+    public void startCar() {
         if (isAdult()) {
             System.out.println(name + " démarre la voiture.");
         } else {
@@ -20,7 +20,7 @@ public class Driver {
         }
     }
 
-    public void stopCar(Car car) {
+    public void stopCar() {
         System.out.println(name + " arrête la voiture.");
     }
 
