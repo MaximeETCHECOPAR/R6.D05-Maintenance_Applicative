@@ -20,21 +20,23 @@ public class Voiture {
         if (vitesse + INCREMENT_SPEED <= SPEED_MAX) {
             vitesse += INCREMENT_SPEED;
             // afficher détails
-            System.out.println("Modèle : " + modele);
-            System.out.println("Couleur : " + couleur);
-            System.out.println("Vitesse actuelle : " + vitesse);
+            printStatus();
         } else {
             System.out.println("La vitesse maximale est atteinte.");
         }
+    }
+
+    private void printStatus() {
+        System.out.println("Modèle : " + modele);
+        System.out.println("Couleur : " + couleur);
+        System.out.println("Vitesse actuelle : " + vitesse);
     }
 
     public void ralentir() {
         if (vitesse - INCREMENT_SPEED >= SPEED_MINIMAL) {
             vitesse -= INCREMENT_SPEED;
             // afficher détails
-            System.out.println("Modèle : " + modele);
-            System.out.println("Couleur : " + couleur);
-            System.out.println("Vitesse actuelle : " + vitesse);
+            printStatus();
         } else {
             System.out.println("La voiture est déjà à l'arrêt.");
         }
